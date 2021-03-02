@@ -1,0 +1,46 @@
+View Apps in Chrome:  chrome://apps/
+
+Blog about PWA's:  https://www.optasy.com/blog/3-essential-steps-convert-your-website-progressive-web-app
+	1. Need HTTPS	2. manifest.json & link to it in html (see below) also get icons of various sizes: https://realfavicongenerator.net/
+	3. service-worker.js (can be blank if you don't need it offline)
+	4. Register in js:  if ('serviceWorker' in navigator) { // register service worker navigator.serviceWorker.register('/service-worker.js'); }
+	5. Generate service worker file:  npm install --global sw-precache
+	6. Run it in your website directory:  sw-precache
+
+Blog about Standalone mode:  https://medium.com/progressive-web-apps/progressive-web-apps-part-iii-standalone-web-application-18d3247e4b2f
+	1. manifest.json, "display":"standalone"	2. <link rel="manifest" href="/manifest.json"> in html head element
+
+Example PWA:  https://vaadin.com/learn/tutorials/learn-pwa/turn-website-into-a-pwa
+	1. get example:  https://github.com/vaadin-learning-center/pwa-tutorial-basic/archive/start.zip
+	2. unzip somewhere
+	3. serve the folder to localhost:  > npm install serve ... and then > serve .
+	4. add the manifest.json & link to it in html
+	5. In Chrome Dev Tools (CTRL+SHIFT+I) go to Application Tab to view manifest details
+	6. In app.js:
+
+window.addEventListener('load', e => {
+  new PWAConfApp();
+  registerSW(); 
+});
+
+async function registerSW() { 
+  if ('serviceWorker' in navigator) { 
+    try {
+      await navigator.serviceWorker.register('./sw.js'); 
+    } catch (e) {
+      alert('ServiceWorker registration failed. Sorry about that.'); 
+    }
+  } else {
+    document.querySelector('.alert').removeAttribute('hidden'); 
+  }
+}
+
+	7. In sw.js:
+
+self.addEventListener('install', async event => {
+  console.log('install event')
+});
+
+self.addEventListener('fetch', async event => {
+  console.log('fetch event')
+});

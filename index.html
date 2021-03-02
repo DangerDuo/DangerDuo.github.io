@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+    <link rel="manifest" href="./manifest.json">
+  </head>
+  <body>
+    <p>This is my page</p>
+    
+    <p>This is a local image:</p>
+
+    <img src="./images/logo-252x80.png" alt="My test image">
+
+    <p>This is an image from the web:</p>
+
+    <img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png">
+    
+    <p>This is an iframe:</p>
+
+    <iframe id="inlineFrameExample"
+      title="Inline Frame Example 1"
+      width="300"
+      height="200"
+      allow="fullscreen"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik">
+    </iframe>
+    
+    <p>This is another iframe:</p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!4v1614274931748!6m8!1m7!1shdOH9JEDGA3QJ_bitBTsuQ!2m2!1d28.50994663598619!2d-81.25866256854174!3f150.10565726949378!4f-6.839821268916097!5f2.032539593329163"
+      width="800"
+      height="600"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+<!--
+    <p>This is another iframe:</p>
+
+    <iframe id="inlineFrameExample"
+      title="Inline Frame Example 1"
+      width="800"
+      height="600"
+      src="http://ocudrhpdmx01/maximo/ui/?event=loadapp&value=wotrack&uisessionid=449&csrftoken=rklvi4nkniagrip5nicfv400jt">
+    </iframe>
+-->
+
+    <p>This is a button:</p>
+
+    <form>  
+    <input type="button" value="click ME" onclick="msg()"/>  
+    </form>
+
+    <p>This is the end.</p>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "PWATest",
+  "short_name": "PWA",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#2A3443",
+  "description": "This is my PWA Test app description",
+  "theme_color": "#2A3443",
+  "icons": [
+    {
+      "src": "./images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
