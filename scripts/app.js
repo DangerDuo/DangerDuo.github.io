@@ -44,9 +44,9 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     alert("Changing img...");
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === './images/icon-512x512.png') {
-      myImage.setAttribute('src','./images/icon-192x192.png');
+    if(mySrc === './images/ddicon-512x512.png') {
+      myImage.setAttribute('src','./images/ddicon-192x192.png');
     } else {
-      myImage.setAttribute('src','./images/icon-512x512.png');
+      myImage.setAttribute('src','./images/ddicon-512x512.png');
     }
 }
