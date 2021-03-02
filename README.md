@@ -1,2 +1,2 @@
 # DangerDuo.github.io
-<img src="./images/ddicon-512x512.png" alt="My test image">
+<img src="./images/ddicon-192x192.png" alt="My test image">
