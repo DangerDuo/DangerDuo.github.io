@@ -1,6 +1,6 @@
 {
-  "name": "PWATest",
-  "short_name": "PWA",
+  "name": "DangerDuo",
+  "short_name": "DangerDuo",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#2A3443",
@@ -8,7 +8,12 @@
   "theme_color": "#2A3443",
   "icons": [
     {
-      "src": "./images/icon-512x512.png",
+      "src": "./images/ddicon-192x192.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/ddicon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
